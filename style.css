@@ -32,10 +32,9 @@ hr {
 }
 
 
-/* .cst-nav-hidden {
-    opacity: 0;
-    pointer-events: none;
-} */
+.cst-nav-ani {
+    transition: box-shadow .3s ease-in;
+}
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
     color: #0075FF;
@@ -104,6 +103,14 @@ hr {
     margin-bottom: 2rem;
 }
 
+.cst-abt-video {
+    width: 100%;
+    height: 30rem;
+}
+
+.cst-abt-video-container {
+    min-height: 31rem;
+}
 
 /* Tours Section*/
 .cst-tours-title {
@@ -229,6 +236,10 @@ hr {
 }
 
 @media screen and (max-width:576px) {
+    .cst-text-hidden {
+        display: none;
+    }
+
     .cst-header-title {
         font-size: 3rem;
     }
@@ -288,7 +299,7 @@ hr {
 
 @media screen and (max-height:569px) {
     .cst-header-img {
-        height: auto;
+        height: 130vh;
         object-fit: cover;
         width: 100%;
     }

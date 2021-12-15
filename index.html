@@ -21,7 +21,7 @@
 <body>
     <header>
         <div class="cst-nav fixed-top container-fluid" style="padding: 0;">
-            <nav id="navbar" class="navbar posi navbar-expand-lg navbar-light bg-light shadow cst-nav-hidden">
+            <nav id="navbar" class="navbar posi navbar-expand-lg navbar-light bg-light cst-nav-ani">
                 <div class="container">
 
 
@@ -109,11 +109,14 @@
                         tellus, sed vehicula sem euismod ut. Morbi iaculis magna consectetur odio imperdiet varius.
                         Vestibulum ut ornare ipsum. Donec viverra rhoncus lectus. Suspendisse ac risus et ante consequat
                         aliquam. </p>
-                    <p class="card-text mx-sm-5">Morbi iaculis magna consectetur odio imperdiet varius. Vestibulum ut
+                    <p class="card-text mx-sm-5 cst-text-hidden">Morbi iaculis magna consectetur odio imperdiet varius.
+                        Vestibulum ut
                         ornare
                         ipsum. Donec viverra rhoncus lectus. Suspendisse ac risus et ante consequat aliquam. </p>
-                    <button type="button" class="btn btn-primary btn-lg cst-cf cst-btn mt-sm-3">Book
-                        Now</button>
+                    <button id="video-btn" type="button" class="btn btn-primary btn-lg cst-cf cst-btn mt-sm-3"
+                        data-bs-toggle="modal" data-bs-target="#abt-video"
+                        data-src="https://www.youtube.com/embed/6CVUm_L2tAI">Learn
+                        more</button>
                 </div>
             </div>
         </section>
@@ -137,12 +140,13 @@
                                     dolorum.
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatum.
                                 </p>
-                                <p class="card-text my-4">
+                                <p class="card-text my-4 cst-text-hidden">
                                     exercitationem atque, ad vitae quod aspernatur? Soluta recusandae reiciendis
                                     dolorum.
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatum.
                                 </p>
-                                <p class="card-text my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+                                <p class="card-text my-4 cst-text-hidden">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Vel
                                     nemo
                                     exercitationem atque, ad vitae quod aspernatur? Soluta recusandae reiciendis
                                     dolorum.
@@ -268,6 +272,26 @@
             </div>
         </section>
         <!--------------------------------MODALS------------------->
+        <div class="modal fade " id="abt-video" tabindex="-1" aria-labelledby="video" aria-hidden="true">
+            <div class="modal-dialog  	modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="background-color: black;border-radius:2rem">
+                    <div class="modal-header justify-content-center" style="border: none;">
+                        <h5 class="modal-title mt-3 cst-cf fs-2 text-white ">The Story of a couple of friends with a
+                            dream.
+                        </h5>
+                    </div>
+                    <div class="modal-body cst-abt-video-container" style="padding-bottom: 0;">
+                        <div id="video-parent" class="ratio ratio-16*9 ">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer my-3" style="border: none;">
+                        <button type="button" class="btn btn-primary btn-lg cst-cf cst-btn ms-3  mt-3"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="modal fade" id="cork" tabindex="-1" aria-labelledby="corkTourLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
@@ -504,21 +528,16 @@
                                         <div class="card-header text-white cst-sf m3"
                                             style=" background-color: #091b30 ;border-top-left-radius: 1rem;border-top-right-radius: 1rem;display: flex;justify-content: flex-start;align-items: center;">
                                             <div class="navbar-brand" style="border-radius: 2rem;">
-                                                <img src="./imgs/trip1.jpg" alt="" width="36" height="36"
+                                                <img src="./imgs/trip2.jpg" alt="" width="36" height="36"
                                                     style="border-radius: 2rem;">
                                             </div>
                                             <h5>david.D.doe</h5>
                                         </div>
                                         <hr>
                                         <div class="card-body mt-auto mb-auto py-5" style="background-color: #fff;">
-                                            <p class="card-text"><i class="fas fa-quote-left ps-2 me-1"></i>Lorem ipsum
-                                                dolor
-                                                sit amet, consectetur adipisicing
-                                                elit.
+                                            <p class="card-text"><i class="fas fa-quote-left ps-2 me-1"></i>
                                                 Excepturi in harum quam nostrum possimus architecto perferendis libero
                                                 distinctio aliquam atque.
-                                                content.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Excepturi in harum quam nostrum possimus architecto perferendis libero
                                                 distinctio aliquam atque.</p>
                                         </div>
 
@@ -542,7 +561,7 @@
                                         <div class="card-header text-white cst-sf m3"
                                             style=" background-color: #091b30 ;border-top-left-radius: 1rem;border-top-right-radius: 1rem;display: flex;justify-content: flex-start;align-items: center;">
                                             <div class="navbar-brand" style="border-radius: 2rem;">
-                                                <img src="./imgs/trip1.jpg" alt="" width="36" height="36"
+                                                <img src="./imgs/trip3.jpg" alt="" width="36" height="36"
                                                     style="border-radius: 2rem;">
                                             </div>
                                             <h5>John doe</h5>
@@ -550,12 +569,8 @@
                                         <hr>
                                         <div class="card-body mt-auto mb-auto py-5" style="background-color: #fff;">
                                             <p class="card-text"><i class="fas fa-quote-left ps-2 me-1"></i>Lorem ipsum
-                                                dolor
-                                                sit amet, consectetur adipisicing
-                                                elit.
-                                                Excepturi in harum quam nostrum possimus architecto perferendis libero
-                                                distinctio aliquam atque.
-                                                content.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+                                                placeat? et, consectetur adipisicing elit.
                                                 Excepturi in harum quam nostrum possimus architecto perferendis libero
                                                 distinctio aliquam atque.</p>
                                         </div>
@@ -918,7 +933,7 @@
         </div>
         <div class="main-footer row container mx-auto">
             <form action="" class="col-lg-6 col-sm-12">
-                <div class=" footer-news">
+                <div class=" footer-news" style="z-index: 3;">
                     <h4>Join Our Newsletter:</h4>
                     <p style="font-weight: 500;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
                         veritatis esse aut eaque quasi

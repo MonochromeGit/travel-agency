@@ -104,19 +104,23 @@ submitBtn.addEventListener('click', () => {
 /* ----------------------FORM--------------------------- */
 
 /* ----------------------NAVBAR--------------------------- */
-// let cstNav = document.getElementById('navbar');
+let cstNav = document.getElementById('navbar');
 
-// window.onscroll = function () {
+window.onscroll = function () {
 
-//     if (this.scrollY >= 200) {
-//         cstNav.classList.remove('cst-nav-hidden');
-//     }
-//     else {
-//         cstNav.classList.add('cst-nav-hidden');
-//     }
-// }
+    if (this.scrollY >= 10) {
+        cstNav.classList.add('shadow');
+    }
+    else {
+        cstNav.classList.remove('shadow');
+    }
+}
 /* ----------------------NAVBAR--------------------------- */
 /* ----------------------elements appear on scroll --------------------------- */
+
+window.addEventListener('load', (e) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+});
 
 let reveals = document.querySelectorAll('.cst-element-fade-hidden');
 window.addEventListener('scroll', function () {
@@ -137,3 +141,29 @@ window.addEventListener('scroll', function () {
 })
 
 /* ----------------------elements appear on scroll --------------------------- */
+
+/* ----------------------ABOUT US VIDEO--------------------------- */
+let videoModal = document.getElementById('abt-video');
+let videoParent = document.getElementById('video-parent');
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    aboutUsVideo();
+}, false);
+
+
+function aboutUsVideo() {
+    videoModal.addEventListener('shown.bs.modal', function (e) {
+        videoParent.innerHTML = `
+        <iframe id="cst-abt-video" class="cst-abt-video embed-responsive-item"
+                                title="YouTube video player" src="https://www.youtube.com/embed/6CVUm_L2tAI"
+                                frameborder="0" allow=" autoplay;" allowfullscreen allowscriptaccess="always"></iframe>
+        `
+    })
+
+    videoModal.addEventListener('hide.bs.modal', function (e) {
+        videoParent.innerHTML = ``
+    })
+}
+
+/* ----------------------/ABOUT US VIDEO--------------------------- */
